@@ -27,16 +27,12 @@ const Layout = ({ children }) => {
         <React.Fragment>
           <div className={context.isDark ? 'darkTheme' : 'lightTheme'}>
             <Header />
-            <Footer />
+            {children}
           </div>
         </React.Fragment>
       )}
     </myContext.Consumer>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

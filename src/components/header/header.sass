@@ -1,1 +1,28 @@
 @import '../../global.sass'
+
+.header 
+    // Layout
+    width: 100vw
+    position: absolute 
+    display: flex 
+    justify-content: space-around
+    margin-top: 20px
+    
+    // Typography
+    font-weight: bold 
+
+    // Misc Styling
+    color: #fff
+    h1 
+        // Typography
+        font-weight: bold 
+        @extend .text-2xl
+    .nav-links 
+        // Layout
+        width: 500px
+        display: flex
+        justify-content: space-between
+
+        // Typography
+        text-transform: uppercase
+        @extend .text-sm

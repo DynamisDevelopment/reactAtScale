@@ -8,16 +8,18 @@ import { myContext } from '../../provider'
 // * Styles 
 import '../styles/posts.sass'
 
-const Posts = () => (
-    <Layout>
-        <myContext.Consumer>
-            {context => (
-                <React.Fragment>
+const Posts = () => {
+    return (
+        <Layout>
+            <myContext.Consumer>
+                {context => (
+                    <React.Fragment>
 
-                </React.Fragment>
-            )}
-        </myContext.Consumer>
-    </Layout>
-)
+                    </React.Fragment>
+                )}
+            </myContext.Consumer>
+        </Layout>
+    )
+}
 
 export default Posts

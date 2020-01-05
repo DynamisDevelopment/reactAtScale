@@ -1,1 +1,59 @@
 @import '../global.sass'
+
+.banner 
+    //* Layout
+    display: flex 
+    justify-content: center 
+    align-items: center
+    width: 100%
+    height: 550px
+    background-color: grey
+    &-logo 
+        // Layout
+        height: 150px
+        width: 400px
+    
+.featured 
+    // Layout
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+    grid-gap: 25px
+    margin-top: 50px
+    @extend .container
+
+    .card 
+        // Layout
+        height: 500px
+        display: flex 
+        flex-direction: column 
+        justify-content: space-around
+        align-items: center
+        @extend .px-12
+
+        // Typography
+        text-align: center
+
+        // Misc Styling
+        border: 1px solid rgba(0,0,0,.125)
+        border-radius: .25rem
+        .icon 
+            // Layout
+            height: 150px
+            width: 150px
+        .title 
+            // Typography
+            text-transform: uppercase 
+            font-weight: bold
+            
+            @extend .text-2xl 
+        .desc 
+            // Typography
+            color: grey
+            @extend .text-xl
+            @extend .font-serif
+        .more-btn 
+            // Misc Styling
+            background-color: #0062cc
+            
+            
+

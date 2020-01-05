@@ -13,7 +13,7 @@ const About = () => {
             <myContext.Consumer>
                 {context => (
                     <React.Fragment>
-
+                        <h1>Howdy</h1>
                     </React.Fragment>
                 )}
             </myContext.Consumer>
