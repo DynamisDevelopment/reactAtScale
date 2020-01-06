@@ -6,7 +6,7 @@ $gold: #CF9827
 $light-blue: #B0F2FF
 $red: #C95034
 $green: #27CF97
-
+$light-green: #0085A1
 body 
     overflow-x: hidden
 
@@ -28,8 +28,12 @@ body
     // Misc Styling
     color: #fff
 
+// Mimicks the header sizing of bootstrap
 .text-sizing 
     // Typography
+    h1, h2, h3, h4, h5 
+        // Layout
+        @extend .my-10
     h1 
         font-weight: bold
         @extend .text-5xl 
@@ -45,6 +49,17 @@ body
     p    
         @extend .font-serif
         @extend .text-lg 
+    ul 
+        // Layout
+        margin-bottom: 15px
+        @extend .px-10
+
+        // Typography
+        @extend .font-serif
+        @extend .text-xl
+
+        // Misc Styling
+        list-style-type: disc
 
 .fancy-text 
     // Typography

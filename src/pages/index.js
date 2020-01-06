@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
 // * Components 
 import Layout from '../components/layout'
@@ -10,6 +10,29 @@ import { myContext } from '../../provider'
 import '../styles/index.sass'
 
 const Index = () => {
+  const data = useStaticQuery(graphql`
+  query {
+      allMarkdownRemark {
+          edges {
+              node {
+                  fields {
+                      slug
+                  }
+                  frontmatter {
+                      title
+                      description
+                      author 
+                      postDate
+                  }
+                  timeToRead
+              }
+          }
+      }
+  }
+`)
+
+  const posts = data.allMarkdownRemark
+
   return (
     <Layout>
       <myContext.Consumer>
@@ -92,6 +115,27 @@ const Index = () => {
 
                   <p className="review">“Peter delivers complex product solutions on time and on budget. He achieves this through a well rounded, insightful business perspective coupled with impressive technical depth and breadth. Even when we were faced with the most difficult of challenges, Peter was a resourceful problem solver with far-reaching connections into Microsoft and many open source projects. I believe his most unique ability is to utilize technology to solve real customer problems, not just for technology’s sake. Peter will be a strong asset to any team.”
                   <br />  — Todd Berger, COO, Transportation Solutions Group</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="center bt">
+              <div className="latest-posts">
+                <h1>Latest Blog Posts</h1>
+                <div className="posts">
+                  {posts.edges.map(post => {
+                    const p = post.node
+                    const pf = p.frontmatter
+
+                    return <div className="post">
+                      <Link to={'/posts/' + p.fields.slug}>
+                        <h1 className='post-title'>{pf.title}</h1>
+                        {pf.description && <h3 className='post-description'>{pf.description}</h3>}
+                      </Link>
+
+                      {pf.author && <h4 className='posted-info'>Posted by {pf.author} on {pf.postDate} · {p.timeToRead} mins read</h4>}
+                    </div>
+                  })}
                 </div>
               </div>
             </div>
