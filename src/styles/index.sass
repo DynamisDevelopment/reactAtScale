@@ -51,11 +51,12 @@
     // Layout
     @extend .container
     @extend .sm-px-2, .md-px-0
+
+    // Typography
+    @extend .text-sizing
     .reviews 
         // Typography
-        font-family: 'Lora', 'Times New Roman', serif
-        color: #868e96
-        font-size: 20px
+        @extend .fancy-text
         .review 
             // Layout
             @extend .my-12

@@ -29,21 +29,21 @@ const Index = () => {
                     <p>Creating Structure &</p>
                     <p>Consistency</p>
                   </div>
-                  <button className='more-btn'>Learn More</button>
+                  <Link to='/posts/solutions-architecture'><button className='more-btn'>Learn More</button></Link>
                 </div>
 
                 <div className="card">
                   <img className='icon' src="./assets/illustrations/migration.jpg" alt="Migration Strategies" />
                   <h2 className='title'>Migration Strategies</h2>
                   <p className='desc'>Bridging Legacy Systems</p>
-                  <button className='more-btn'>Learn More</button>
+                  <Link to='/posts/migration-strategies'><button className='more-btn'>Learn More</button></Link>
                 </div>
 
                 <div className="card">
                   <img className='icon' src="./assets/illustrations/cto-advisor.jpg" alt="CTO Advisor" />
                   <h2 className='title'>CTO Advisor</h2>
                   <p className='desc'>Translating Truth from Hype</p>
-                  <button className='more-btn'>Learn More</button>
+                  <Link to='/posts/cto-advisor'><button className='more-btn'>Learn More</button></Link>
                 </div>
               </div>
             </div>

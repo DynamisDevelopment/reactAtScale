@@ -7,8 +7,8 @@ import './header.sass'
 const Header = () => {
     return (
         <div className='center'>
-            <div className="header">
-                <h1>Home Page and Blog</h1>
+            <header className="header">
+                <Link to='/'><h1>Home Page and Blog</h1></Link>
                 <ul className='nav-links'>
                     <Link to='#'>Home</Link>
                     <Link to='/about'>About</Link>
@@ -16,7 +16,7 @@ const Header = () => {
                     <Link to='/posts'>Posts</Link>
                     <Link to='/contact'>Contact</Link>
                 </ul>
-            </div>
+            </header>
         </div>
     )
 }
