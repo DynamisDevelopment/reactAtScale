@@ -8,6 +8,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sass',
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/posts`
+      }
+    }
   ],
 }

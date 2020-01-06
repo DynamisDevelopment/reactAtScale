@@ -27,5 +27,5 @@ const Footer = () => {
         </div>
     )
 }
-
+// <div className="copyright">Made by yours truly © {getYear()}</div>
 export default Footer

@@ -41,8 +41,23 @@
         .more-btn 
             // Misc Styling
             background-color: $dark-blue
+
+            // Animation
+            transition: .2s ease-in-out
             &:hover 
                 background-color: #0085A1
-            
+
+.content 
+    // Layout
+    @extend .container
+    @extend .sm-px-2, .md-px-0
+    .reviews 
+        // Typography
+        font-family: 'Lora', 'Times New Roman', serif
+        color: #868e96
+        font-size: 20px
+        .review 
+            // Layout
+            @extend .my-12
             
 

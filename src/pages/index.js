@@ -47,6 +47,23 @@ const Index = () => {
                 </div>
               </div>
             </div>
+
+            <div className="center">
+              <div className="content">
+                <h2>What Others Say</h2>
+                <div className="reviews">
+
+                  <p className="review">“As CEO of VisionCare, Inc., I contracted with Peter Kellner to replace our aging PIC-based computer system, so we could continue working into the Year 2000. Our company depends on the computer system for millions of dollars in annual claims processing, broker payments, and physician payments as well as many other critical functions. Peter and his team were great at communicating issues as they came up, resolving them, and, most importantly, delivering a properly working system on schedule. We had a team of six QA people verify that everything converted perfectly, and the new programs worked exactly as specified. I can’t say it is ever a pleasure to change computer systems, but it was a pleasure working with Peter and his team!”
+                  <br />— Howard Braverman, O.D., CEO, VCI</p>
+
+                  <p className="review">“Peter is a very passionate person. His knowledge of AngularJS is beyond comparison.”
+                  <br /> — Caro Waelens, RFID and Data Analyst</p>
+
+                  <p className="review">“Peter delivers complex product solutions on time and on budget. He achieves this through a well rounded, insightful business perspective coupled with impressive technical depth and breadth. Even when we were faced with the most difficult of challenges, Peter was a resourceful problem solver with far-reaching connections into Microsoft and many open source projects. I believe his most unique ability is to utilize technology to solve real customer problems, not just for technology’s sake. Peter will be a strong asset to any team.”
+                  <br />  — Todd Berger, COO, Transportation Solutions Group</p>
+                </div>
+              </div>
+            </div>
           </React.Fragment>
         )}
       </myContext.Consumer>
