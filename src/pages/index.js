@@ -2,7 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 // * Components 
-import Layout from "../components/layout"
+import Layout from '../components/layout'
+import Banner from '../components/banner/banner'
 import { myContext } from '../../provider'
 
 // * Styles 
@@ -14,9 +15,8 @@ const Index = () => {
       <myContext.Consumer>
         {context => (
           <React.Fragment>
-            <div className="banner">
-              <img src="./assets/logos/logo-white.png" alt="React at Scale Logo" className='banner-logo' />
-            </div>
+            <Banner />
+
             <div className="center">
               <div className="featured">
                 <div className="card">

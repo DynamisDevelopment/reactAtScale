@@ -3,6 +3,7 @@ import React from 'react'
 // * Components 
 import Layout from '../components/layout'
 import { myContext } from '../../provider'
+import Banner from '../components/banner/banner'
 
 //* Styles 
 import '../styles/about.sass'
@@ -13,7 +14,7 @@ const About = () => {
             <myContext.Consumer>
                 {context => (
                     <React.Fragment>
-                        <h1>Howdy</h1>
+                        <Banner imgSrc="./assets/banner/about-bg.jpg" imgAlt="Map" title="About Me" />
                     </React.Fragment>
                 )}
             </myContext.Consumer>

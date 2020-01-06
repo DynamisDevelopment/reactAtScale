@@ -11,10 +11,10 @@ const Header = () => {
                 <h1>Home Page and Blog</h1>
                 <ul className='nav-links'>
                     <Link to='#'>Home</Link>
-                    <Link to='#'>About</Link>
-                    <Link to='#'>Courses</Link>
-                    <Link to='#'>Posts</Link>
-                    <Link to='#'>Contact</Link>
+                    <Link to='/about'>About</Link>
+                    <Link to='/courses'>Courses</Link>
+                    <Link to='/posts'>Posts</Link>
+                    <Link to='/contact'>Contact</Link>
                 </ul>
             </div>
         </div>
