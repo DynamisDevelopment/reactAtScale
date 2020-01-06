@@ -50,6 +50,37 @@ const Index = () => {
 
             <div className="center">
               <div className="content">
+                <h2>Been there, done that, happy to help you do it!</h2>
+                <h4 className='intro'>I totally get it. You've got your current web site in a technology that's good but not great. Everyone's talking about SPA's, Serverless, Server-side, TypeScript and more. Let me help you devise a plan, and help you execute so that you are getting the best bang for your web site dollars. </h4>
+
+                <h2>Specifically, I can help with:</h2>
+                <ul>
+                  <li><strong>Making a Plan.</strong>  This is the most important part. I'll work with you to figure out what you've got, what can be re-used and what needs to be re-written. We'll make time estimates and give you a real idea of where you stand. </li>
+                  <li><strong>Help Train Your Staff.</strong> Let me help get your staff up to speed with what they need to know. Lots of consultants love to come in and become a forever part of your team.  Not me. I want to get in, get out and leave you in a much better place. </li>
+                  <li><strong>Code Quality.</strong> I'm hard wired to build quality code. Let me help you get your team hardwired the same way.  Testing enough (testing too much?), Using TypeScript (maybe you should, maybe you should not), are you using your version control well? branching strategies? How about coding documentation. These days it's amazing easy to build docs that not only help you maintain your information for posterity (OK, not that useful) but let's your team use it for reference. Let me show you how to make that a part of your culture. </li>
+                  <li><strong>Deployment Strategy.</strong> Do you have a great continuous build and deploy process in place? Source control directly to production? If not, I can help. Nothing makes me happier then to check into a production branch and then 30 minutes later, after all testing passes, the web site is live and in production with the latest update. </li>
+                  <li><strong>On-boarding New Staff.</strong> Let me help you with a plan for this. It's never free to teach your new engineers, but it can be a lot cheaper and better than it probably is. </li>
+                </ul>
+
+                <h2>Notable Accomplishments</h2>
+                <ul>
+                  <li><strong>Pluralsight Author</strong> <br />
+                    Authored nine Pluralsight courses for developers. Topics include React, ASP.NET Core and Security.
+                  </li>
+                  <li><strong>Microsoft Documentation Author</strong> <br />
+                    Wrote many pages of Microsoft's official documentation for ASP.NET Core.
+                  </li>
+                  <li><strong>Microsoft ASPInsider</strong> <br />
+                    <a href="https://aspinsiders.com/" target="_blank" rel="noreferrer">The ASPInsiders</a> is a select group of international professionals who have a demonstrated expertise in ASP.NET technologies and who provide valuable, early feedback on related developing technologies and publications to their peers, the Microsoft ASP.NET team, and others.
+                  </li>
+                  <li><strong>Microsoft MVP</strong> <br />
+                    This award is given by Microsoft to "technology experts who passionately share their knowledge with the community, award years 2007-2018
+                  </li>
+                  <li><strong>Conference Founder Including Silicon Valley Code Camp and AngularU</strong> <br />
+                    Established Silicon Valley Code Camp in 2006 whose mission is to provide the highest quality content built around the topic of computer code. Code Camp draws thousands of attendees year after year with top sponsorship from Silicon Valley's companies including Microsoft, IBM, Google, PayPal, Twilio and others. This annual event creates an environment to network and share knowledge.
+                  </li>
+                </ul>
+
                 <h2>What Others Say</h2>
                 <div className="reviews">
 
