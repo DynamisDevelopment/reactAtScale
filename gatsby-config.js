@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `React At Scale`,
-    description: ``,
+    description: `React At Scale`,
     author: `Joshua Hall`,
   },
   plugins: [

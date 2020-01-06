@@ -1,3 +1,4 @@
+// @import '../node_modules/bootstrap/scss/bootstrap.scss'
 @import '../node_modules/headwindcss/headwind.scss'
 
 $dark-blue: #3563C9
@@ -6,13 +7,16 @@ $light-blue: #B0F2FF
 $red: #C95034
 $green: #27CF97
 
-// Used with .container to center everything
+body 
+    overflow-x: hidden
+
+// Wrap over .container to center everything
 .center 
     // Layout
     display: flex 
     justify-content: center
 
-// Just supply background and hover colors
+// Just supply background and hover colors per instance
 .more-btn 
     // Layout
     @extend .p-5

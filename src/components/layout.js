@@ -28,6 +28,7 @@ const Layout = ({ children }) => {
           <div className={context.isDark ? 'darkTheme' : 'lightTheme'}>
             <Header />
             {children}
+            <Footer />
           </div>
         </React.Fragment>
       )}
