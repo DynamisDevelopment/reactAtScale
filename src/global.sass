@@ -1,20 +1,89 @@
-.colorTheme 
-    height: 100vh
-    transition: .3s ease-in-out
+// @import '../node_modules/bootstrap/scss/bootstrap.scss'
+@import '../node_modules/headwindcss/headwind.scss'
 
-.darkTheme 
-    @extend .colorTheme
-    background-color: #1A202C
+$dark-blue: #3563C9
+$gold: #CF9827
+$light-blue: #B0F2FF
+$red: #C95034
+$green: #27CF97
+$light-green: #0085A1
+body 
+    overflow-x: hidden
+
+// Wrap over .container to center everything
+.center 
+    // Layout
+    display: flex 
+    justify-content: center
+
+// Just supply background and hover colors per instance
+.more-btn 
+    // Layout
+    @extend .p-5
+
+    // Typography
+    text-transform: uppercase 
+    font-weight: bold 
+
+    // Misc Styling
     color: #fff
-    a
-        color: yellow
 
-.lightTheme 
-    @extend .colorTheme
-    background-color: #fff
-    color: #000
-    
+// Base style for h tags and lists
+.text-sizing 
+    // Typography
+    color: #212529
+    h1, h2, h3, h4, h5 
+        // Layout
+        @extend .my-10
+    h1 
+        font-weight: bold
+        @extend .text-5xl 
+    h2 
+        font-weight: bold
+        @extend .text-4xl
+    h3 
+        @extend .text-3xl
+    h4 
+        @extend .text-2xl
+    h5 
+        @extend .text-xl 
+    p    
+        @extend .font-serif
+        @extend .text-lg 
+    ul 
+        // Layout
+        margin-bottom: 15px
+        @extend .px-10
 
+        // Typography
+        @extend .font-serif
+        @extend .text-xl
+
+        // Misc Styling
+        list-style-type: disc
+
+.fancy-text 
+    // Typography
+    font-size: 20px
+    color: #868e96
+    font-family: 'Lora', 'Times New Roman', serif
+
+// Responsive wrapper for posts and services
+.post-structure 
+    margin-top: 75px
+    @extend .container
+    @extend .sm-px-12, .md-px-24, .lg-px-56
+
+    // Typography
+    @extend .text-sizing
+    h4 
+        // Typography
+        font-weight: bold
+        @extend .font-serif
+    p 
+        // Layout
+        margin: 20px 0 20px 0
+        @extend .text-xl
 
 
 
