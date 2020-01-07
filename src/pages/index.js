@@ -12,7 +12,7 @@ import '../styles/index.sass'
 const Index = () => {
   const data = useStaticQuery(graphql`
   query {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/posts/"}}) {
           edges {
               node {
                   fields {
@@ -123,11 +123,11 @@ const Index = () => {
               <div className="latest-posts">
                 <h1>Latest Blog Posts</h1>
                 <div className="posts">
-                  {posts.edges.map(post => {
+                  {posts.edges.map((post, i) => {
                     const p = post.node
                     const pf = p.frontmatter
 
-                    return <div className="post">
+                    return <div className="post" key={i}>
                       <Link to={'/posts/' + p.fields.slug}>
                         <h1 className='post-title'>{pf.title}</h1>
                         {pf.description && <h3 className='post-description'>{pf.description}</h3>}

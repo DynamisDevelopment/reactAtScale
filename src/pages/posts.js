@@ -12,7 +12,7 @@ import '../styles/posts.sass'
 const Posts = () => {
     const data = useStaticQuery(graphql`
         query {
-            allMarkdownRemark {
+            allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/posts/"}}) {
                 edges {
                     node {
                         fields {

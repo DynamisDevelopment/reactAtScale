@@ -11,6 +11,7 @@ export const query = graphql`
             frontmatter {
                 title 
                 postDate
+                author
             }
             html
             timeToRead
@@ -27,8 +28,12 @@ const Post = props => {
                 {context => (
                     <React.Fragment>
                         <div className="post-content">
-                            <Banner title={post.frontmatter.title} subTitle={`Posted by ${post.frontmatter.author} on ${post.frontmatter.postDate} · ${post.timeToRead} mins read`} />
-                            <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+                            <Banner title={post.frontmatter.title} subTitle={post.frontmatter.author && `Posted by ${post.frontmatter.author} on ${post.frontmatter.postDate} · ${post.timeToRead} mins read`} />
+                            <div className="center">
+                                <div className="post-structure post">
+                                    <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+                                </div>
+                            </div>
                         </div>
                     </React.Fragment>
                 )}

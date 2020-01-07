@@ -28,7 +28,7 @@ export default About
 const Content = () => {
     return (
         <div className='center'>
-            <div className="about">
+            <div className="about post-structure">
 
                 <p>Peter is an independent software consultant, and a technology leader in full stack software development. Earlier, he founded and was president of Tufden Inc. a company that delivered software systems (500+ companies nationwide) for clinic scheduling, insurance company management, and medical claims processing. More recently, Peter has authored courses for Pluralsight.com covering a wide range of programming topics. Pluralsight, with close to a million subscribers, is known as the top training destination for hardcore software developers. He also founded in 2007, and continues to run Silicon Valley Code Camp. It’s an annual weekend educational event for programmers that most recently was hosted at PayPal HQ. Top sponsors include Google, Microsoft, IBM, PayPal and others.</p>
 

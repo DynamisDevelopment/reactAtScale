@@ -68,6 +68,23 @@ body
     color: #868e96
     font-family: 'Lora', 'Times New Roman', serif
 
+// Responsive wrapper for posts and services
+.post-structure 
+    margin-top: 75px
+    @extend .container
+    @extend .sm-px-12, .md-px-24, .lg-px-56
+
+    // Typography
+    @extend .text-sizing
+    h4 
+        // Typography
+        font-weight: bold
+        @extend .font-serif
+    p 
+        // Layout
+        margin: 20px 0 20px 0
+        @extend .text-xl
+
 
 
 
