@@ -1,5 +1,6 @@
 // @import '../node_modules/bootstrap/scss/bootstrap.scss'
 @import '../node_modules/headwindcss/headwind.scss'
+@import url('https://fonts.googleapis.com/css?family=Lora:400i&display=swap') // Add Lora Font
 
 $dark-blue: #3563C9
 $gold: #CF9827
@@ -38,16 +39,16 @@ body
         @extend .my-10
     h1 
         font-weight: bold
-        @extend .text-5xl 
+        @extend .sm-text-4xl, .lg-text-5xl 
     h2 
         font-weight: bold
-        @extend .text-4xl
+        @extend .sm-text-3xl, .lg-text-4xl
     h3 
-        @extend .text-3xl
+        @extend .sm-text-2xl, .lg-text-3xl
     h4 
-        @extend .text-2xl
+        @extend .sm-text-xl, .lg-text-2xl
     h5 
-        @extend .text-xl 
+        @extend .sm-text-lg, .lg-text-xl 
     p    
         @extend .font-serif
         @extend .text-lg 
@@ -62,6 +63,9 @@ body
 
         // Misc Styling
         list-style-type: disc
+        li 
+            // Layout
+            @extend .my-3
 
 .fancy-text 
     // Typography
@@ -73,7 +77,7 @@ body
 .post-structure 
     margin-top: 75px
     @extend .container
-    @extend .sm-px-12, .md-px-24, .lg-px-56
+    @extend .sm-px-6, .md-px-24, .lg-px-56
 
     // Typography
     @extend .text-sizing
@@ -85,6 +89,9 @@ body
         // Layout
         margin: 20px 0 20px 0
         @extend .text-xl
+    pre, code // For code snippets
+        overflow-x: auto
+
 
 
 

@@ -9,11 +9,11 @@ postDate: September 25, 2019
 
 A few months back I started using TypeScript on the Silicon Valley Code Camp New Web App (It’s written using React now and is mobile responsive based of bootstrap). For everyone, it’s different but here are my 5 steps of coming to terms with TypeScript (so far).
 
-    I know I should learn TypeScript, just no time.
-    I’m trying to convert my first project and everyone says it’s easy. This is crazy hard. How does anyone use it?
-    Maybe this isn’t so bad, I can see it helping for getting parameters correct but otherwise, it’s really a lot of trouble.
-    It is helping me quite a bit. I keep running into problems that I know without TypeScript would be hard to fix.
-    I wonder if I’m using the “any” type too much and I’m somehow loosing important information I should really know about
+1. I know I should learn TypeScript, just no time.
+2. I’m trying to convert my first project and everyone says it’s easy. This is crazy hard. How does anyone use it?
+3. Maybe this isn’t so bad, I can see it helping for getting parameters correct but otherwise, it’s really a lot of trouble.
+4. It is helping me quite a bit. I keep running into problems that I know without TypeScript would be hard to fix.
+5. I wonder if I’m using the “any” type too much and I’m somehow loosing important information I should really know about
 
 ## Todays Quandry
 
