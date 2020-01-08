@@ -70,6 +70,8 @@
 
 .latest-posts 
     // Layout
+    display: flex
+    flex-direction: column 
     @extend .container
 
     // Typography
@@ -78,6 +80,25 @@
         // Layout
         align-items: start
         @extend .px-0
+    .all-posts-btn 
+        // Layout
+        margin-top: 10px
+        width: 200px 
+        align-self: flex-end
+        button 
+            @extend .more-btn
+
+            // Typography
+            letter-spacing: 1px
+
+            // Animation
+            transition: .2s ease-in-out 
+
+            // Misc Styling
+            background-color: $light-green
+            &:hover 
+                background-color: darken($light-green, 10%)
+        
 
             
 

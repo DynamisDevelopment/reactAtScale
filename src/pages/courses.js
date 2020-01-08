@@ -14,7 +14,7 @@ const Courses = () => {
             <myContext.Consumer>
                 {context => (
                     <React.Fragment>
-                        <Banner imgSrc="./assets/banner/courses-bg.jpeg" imgAlt="Map" title="Video Training Courses" />
+                        <Banner imgSrc="./assets/banner/courses-mini-bg.jpg" imgAlt="Map" title="Video Training Courses" />
                         <div className="center">
                             <div className="courses">
                                 {/*// * Using React Hooks */}

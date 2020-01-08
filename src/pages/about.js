@@ -14,7 +14,7 @@ const About = () => {
             <myContext.Consumer>
                 {context => (
                     <React.Fragment>
-                        <Banner imgSrc="./assets/banner/about-bg.jpg" imgAlt="Map" title="About Me" />
+                        <Banner imgSrc="./assets/banner/about-mini-bg.jpg" imgAlt="Map" title="About Me" />
                         <Content />
                     </React.Fragment>
                 )}

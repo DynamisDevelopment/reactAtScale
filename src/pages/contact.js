@@ -14,7 +14,7 @@ const Contact = () => {
             <myContext.Consumer>
                 {context => (
                     <React.Fragment>
-                        <Banner imgSrc="./assets/banner/contact-bg.jpg" imgAlt="Map"
+                        <Banner imgSrc="./assets/banner/contact-mini-bg.jpg" imgAlt="Map"
                             title="Contact Me" subTitle="How can I help you?" />
 
                         <div className="center bb">

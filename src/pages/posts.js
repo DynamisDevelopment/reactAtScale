@@ -37,7 +37,7 @@ const Posts = () => {
             <myContext.Consumer>
                 {context => (
                     <React.Fragment>
-                        <Banner imgSrc="./assets/banner/posts-bg.jpg" imgAlt="Map" title="Posts" />
+                        <Banner imgSrc="./assets/banner/posts-mini-bg.jpg" imgAlt="Map" title="Posts" />
                         <div className="center">
                             <div className="posts">
                                 {posts.edges.map(post => {

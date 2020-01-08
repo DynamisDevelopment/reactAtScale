@@ -12,7 +12,7 @@ import '../styles/index.sass'
 const Index = () => {
   const data = useStaticQuery(graphql`
   query {
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/posts/"}}) {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/posts/"}}, limit: 3) {
           edges {
               node {
                   fields {
@@ -137,6 +137,7 @@ const Index = () => {
                     </div>
                   })}
                 </div>
+                <Link to='/posts' className="all-posts-btn"><button>View All Posts</button></Link>
               </div>
             </div>
           </React.Fragment>
