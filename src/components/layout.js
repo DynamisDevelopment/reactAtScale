@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from "gatsby"
 // * Components
 import Header from './header/header'
 import Footer from './footer/footer'
-import { myContext } from '../../provider'
 
 // * Styles
 import '../global.sass'
@@ -22,17 +21,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <myContext.Consumer>
-      {context => (
-        <React.Fragment>
-          <div className={context.isDark ? 'darkTheme' : 'lightTheme'}>
-            <Header />
-            {children}
-            <Footer />
-          </div>
-        </React.Fragment>
-      )}
-    </myContext.Consumer>
+    <div>
+      <Header />
+      {children}
+      <Footer />
+    </div>
   )
 }
 

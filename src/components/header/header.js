@@ -5,6 +5,9 @@ import { Link } from "gatsby"
 import './header.sass'
 
 const Header = () => {
+    const [show, setShow] = React.useState(false)
+
+    const handleToggle = () => setShow(!show)
     return (
         <div className='center'>
             <header className="header">

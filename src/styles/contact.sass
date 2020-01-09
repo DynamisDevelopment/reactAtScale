@@ -9,12 +9,57 @@
     display: flex 
     flex-direction: column
     align-items: center
-    @extend .px-12
+    @extend .sm-px-3, .md-px-12
     @extend .container 
 
     // Typography
     @extend .font-serif
     .form-title 
+        @extend .sm-mx-3, .md-mx-12
+
         // Typography
-        @extend .text-lg
+        @extend .text-2xl
+    .formik-form 
+        // Layout
+        margin-top: 25px
+        min-width: 100%
+
+        // Typography
+        @extend .text-2xl
+        input, textarea 
+            // Layout
+            width: 100%
+            @extend .py-12
+
+            // Misc Styling
+            color: rgba(0,0,0,.5)
+            border-bottom: 1px solid rgba(0,0,0, .4)
+        .error 
+            // Layout
+            position: absolute
+            margin-top: 10px
+
+            // Typography
+            font-weight: 200
+            @extend .text-base
+
+            // Misc Styling
+            color: red
+        .more-btn 
+            // Layout
+            margin-top: 65px
+            padding: 20px 25px 20px 25px
+
+            // Typography
+            @extend .text-base 
+            @extend .font-sans 
+
+            // Animation
+            transition: .2s ease-in-out
+
+            // Misc Styling
+            background-color: $light-green
+            &:hover 
+                background-color: darken($light-green, 10%)
+            
     

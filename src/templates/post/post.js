@@ -2,7 +2,6 @@ import React from 'react'
 
 // * Components 
 import Layout from '../../components/layout'
-import { myContext } from '../../../provider'
 import Banner from '../../components/banner/banner'
 import { DiscussionEmbed } from "disqus-react"
 
@@ -32,23 +31,17 @@ const Post = props => {
 
     return (
         <Layout>
-            <myContext.Consumer>
-                {context => (
-                    <React.Fragment>
-                        <div className="post-content">
-                            <Banner title={post.frontmatter.title} subTitle={post.frontmatter.postDate && `Posted by Peter Kellner on ${post.frontmatter.postDate} · ${post.timeToRead} mins read`} />
-                            <div className="center">
-                                <div className="post-structure post">
-                                    <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-                                </div>
-                            </div>
-                            <div className="center">
-                                <div className="post-comments"><DiscussionEmbed {...disqusConfig} /></div>
-                            </div>
-                        </div>
-                    </React.Fragment>
-                )}
-            </myContext.Consumer>
+            <div className="post-content">
+                <Banner title={post.frontmatter.title} subTitle={post.frontmatter.postDate && `Posted by Peter Kellner on ${post.frontmatter.postDate} · ${post.timeToRead} mins read`} />
+                <div className="center">
+                    <div className="post-structure post">
+                        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+                    </div>
+                </div>
+                <div className="center">
+                    <div className="post-comments"><DiscussionEmbed {...disqusConfig} /></div>
+                </div>
+            </div>
         </Layout>
     )
 }
