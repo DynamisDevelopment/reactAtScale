@@ -19,11 +19,17 @@
         // Typography
         @extend .fancy-text
     .post 
+        // Layout
+        width: 100%
+        @extend .sm-px-3, .md-px-0
         h1, h2, h3, h4
             // Layout
             line-height: 1.2em
             @extend .lg-px-12
             @extend .my-3
+
+            // Typography
+            text-align: left 
 
             // Animation
             transition: .2s ease-in-out

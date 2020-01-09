@@ -39,6 +39,7 @@
     "gatsby-tinacms-remark": "^0.6.1",
     "headwindcss": "^1.0.1",
     "prettier": "^1.19.1",
+    "react-slugify": "^2.0.1",
     "styled-components": "^4.4.1"
   },
   "license": "MIT",

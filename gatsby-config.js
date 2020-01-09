@@ -40,5 +40,15 @@ module.exports = {
         path: `${__dirname}/public/assets`
       }
     },
+    {
+      resolve: 'gatsby-plugin-tinacms',
+      options: {
+        plugins: [
+          "gatsby-tinacms-git",
+          "gatsby-tinacms-remark",
+        ],
+        position: 'fixed'
+      }
+    }
   ],
 }

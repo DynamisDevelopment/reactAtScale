@@ -4,6 +4,9 @@ import React from 'react'
 import Layout from '../../components/layout'
 import Banner from '../../components/banner/banner'
 import { DiscussionEmbed } from "disqus-react"
+import { remarkForm, DeleteAction } from 'gatsby-tinacms-remark'
+import { Wysiwyg } from '@tinacms/fields'
+import { TinaField } from '@tinacms/form-builder'
 
 // * Styles 
 import './post.sass'
@@ -15,6 +18,9 @@ export const query = graphql`
                 title 
                 postDate
             }
+            fileRelativePath
+            rawFrontmatter
+            rawMarkdownBody
             html
             timeToRead
         }
@@ -46,4 +52,9 @@ const Post = props => {
     )
 }
 
-export default Post
+const deleteButton = {
+    label: 'Delete',
+    actions: [DeleteAction]
+}
+
+export default remarkForm(Post, deleteButton)
