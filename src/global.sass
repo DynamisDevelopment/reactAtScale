@@ -39,14 +39,14 @@ body
         @extend .my-10
     h1 
         font-weight: bold
-        @extend .sm-text-4xl, .lg-text-5xl 
+        @extend .sm-text-3xl, .md-text-4xl, .lg-text-5xl 
     h2 
         font-weight: bold
-        @extend .sm-text-3xl, .lg-text-4xl
+        @extend .sm-text-2xl, .md-text-3xl, .lg-text-4xl
     h3 
-        @extend .sm-text-2xl, .lg-text-3xl
+        @extend .sm-text-xl, .md-text-2xl, .lg-text-3xl
     h4 
-        @extend .sm-text-xl, .lg-text-2xl
+        @extend .sm-text-lg, .lg-text-2xl
     h5 
         @extend .sm-text-lg, .lg-text-xl 
     p    
@@ -66,6 +66,9 @@ body
         li 
             // Layout
             @extend .my-3
+    ol 
+        @extend ul
+        list-style-type: decimal
 
 .fancy-text 
     // Typography
@@ -89,8 +92,15 @@ body
         // Layout
         margin: 20px 0 20px 0
         @extend .text-xl
+    p code, ol code, ul p 
+        // Misc Styling
+        color: #e83e8c
     pre, code // For code snippets
         overflow-x: auto
+    a 
+        text-decoration: underline
+        &:hover 
+            color: $light-blue
 
 
 

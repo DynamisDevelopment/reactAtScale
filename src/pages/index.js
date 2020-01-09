@@ -21,35 +21,17 @@ const Index = () => {
                   frontmatter {
                       title
                       description
-                      author 
                       postDate
                   }
                   timeToRead
               }
           }
       }
-  }
-`)
+  }`)
 
-  //   const images = useStaticQuery(graphql`
-  //     query {
-  //         image1: file(relativePath: {eq: "images/jumbotron/pic2-lg.jpg"}) {
-  //             childImageSharp { fluid(quality: 100)  { ...GatsbyImageSharpFluid_withWebp } }
-  //         }
-  //         image2: file(relativePath: {eq: "images/jumbotron/pic1-lg.jpg"}) {
-  //             childImageSharp { fluid(quality: 100)  { ...GatsbyImageSharpFluid_withWebp } }
-  //         }
-  //         image3: file(relativePath: {eq: "images/jumbotron/pic3-lg.jpg"}) {
-  //             childImageSharp { fluid(quality: 100)  { ...GatsbyImageSharpFluid_withWebp } }
-  //         }
-  //         image4: file(relativePath: {eq: "images/jumbotron/pic4-lg.jpg"}) {
-  //             childImageSharp { fluid(quality: 100)  { ...GatsbyImageSharpFluid_withWebp } }
-  //         }
-  // }
-  // `)
 
   const posts = data.allMarkdownRemark
-
+  console.log(data.logo)
   return (
     <Layout>
       <myContext.Consumer>

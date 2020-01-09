@@ -1,7 +1,6 @@
 ---
 title: To TypeScript or Not To TypeScript
 description: A discussion about whether it's worth the extra effort to add TypeScript to a JavaScript...
-author: Peter Kellner
 postDate: September 25, 2019
 ---
 

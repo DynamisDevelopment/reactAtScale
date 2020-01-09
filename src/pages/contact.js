@@ -14,12 +14,14 @@ const Contact = () => {
             <myContext.Consumer>
                 {context => (
                     <React.Fragment>
-                        <Banner imgSrc="./assets/banner/contact-mini-bg.jpg" imgAlt="Map"
-                            title="Contact Me" subTitle="How can I help you?" />
+                        <div className="contact">
+                            <Banner imgSrc="./assets/banner/contact-mini-bg.jpg" imgAlt="Map"
+                                title="Contact Me" subTitle="How can I help you?" />
 
-                        <div className="center bb">
-                            <div className="contact-form">
-                                <h4 className='form-title'>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</h4>
+                            <div className="center bb">
+                                <div className="contact-form">
+                                    <h4 className='form-title'>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</h4>
+                                </div>
                             </div>
                         </div>
                     </React.Fragment>

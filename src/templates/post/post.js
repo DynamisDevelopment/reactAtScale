@@ -4,6 +4,10 @@ import React from 'react'
 import Layout from '../../components/layout'
 import { myContext } from '../../../provider'
 import Banner from '../../components/banner/banner'
+import { DiscussionEmbed } from "disqus-react"
+
+// * Styles 
+import './post.sass'
 
 export const query = graphql`
     query($slug: String!) {
@@ -11,7 +15,6 @@ export const query = graphql`
             frontmatter {
                 title 
                 postDate
-                author
             }
             html
             timeToRead
@@ -22,17 +25,25 @@ export const query = graphql`
 const Post = props => {
     const post = props.data.markdownRemark
 
+    const disqusConfig = {
+        shortname: process.env.GATSBY_DISQUS_NAME,
+        config: { identifier: post.slug },
+    }
+
     return (
         <Layout>
             <myContext.Consumer>
                 {context => (
                     <React.Fragment>
                         <div className="post-content">
-                            <Banner title={post.frontmatter.title} subTitle={post.frontmatter.author && `Posted by ${post.frontmatter.author} on ${post.frontmatter.postDate} · ${post.timeToRead} mins read`} />
+                            <Banner title={post.frontmatter.title} subTitle={post.frontmatter.postDate && `Posted by Peter Kellner on ${post.frontmatter.postDate} · ${post.timeToRead} mins read`} />
                             <div className="center">
                                 <div className="post-structure post">
                                     <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
                                 </div>
+                            </div>
+                            <div className="center">
+                                <div className="post-comments"><DiscussionEmbed {...disqusConfig} /></div>
                             </div>
                         </div>
                     </React.Fragment>

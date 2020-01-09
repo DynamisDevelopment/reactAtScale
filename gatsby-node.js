@@ -1,4 +1,5 @@
 const path = require("path")
+const { paginate } = require('gatsby-awesome-pagination')
 
 // * Generate slug per post
 module.exports.onCreateNode = ({ node, actions }) => {
@@ -32,6 +33,14 @@ module.exports.createPages = async ({ graphql, actions }) => {
             }
         }
     `)
+
+    paginate({
+        createPage,
+        items: res.data.allMarkdownRemark.edges,
+        itemsPerPage: 2,
+        pathPrefix: '/posts',
+        component: path.resolve('src/templates/posts/posts.js')
+    })
 
     res.data.allMarkdownRemark.edges.forEach(edge => {
         createPage({

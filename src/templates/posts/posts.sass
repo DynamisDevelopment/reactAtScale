@@ -1,4 +1,4 @@
-@import '../global.sass'
+@import '../../global.sass'
 
 .posts 
     // Layout
@@ -7,7 +7,7 @@
     flex-direction: column 
     align-items: center
     @extend .container
-    @extend .px-56
+    @extend .sm-px-4, .md-px-32, .lg-px-56
 
     // Typography
     font-weight: normal
@@ -19,8 +19,14 @@
         // Typography
         @extend .fancy-text
     .post 
-        h1, h3
-        transition: .2s ease-in-out
+        h1, h2, h3, h4
+            // Layout
+            line-height: 1.2em
+            @extend .lg-px-12
+            @extend .my-3
+
+            // Animation
+            transition: .2s ease-in-out
         &:hover
             h1, h3
                 color: $light-green
