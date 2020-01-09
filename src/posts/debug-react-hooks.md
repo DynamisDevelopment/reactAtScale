@@ -1,7 +1,9 @@
 ---
 title: Debug React Hooks useState and useReducer with Redux DevTools Redux Support
-description: Learn how to debug state changes in chrome dev tools while using the React Hooks...
-postDate: September 19, 2019
+description: >-
+  Learn how to debug state changes in chrome dev tools while using the React
+  Hooks...
+postDate: 'September 19, 2019'
 ---
 
 ## Background
