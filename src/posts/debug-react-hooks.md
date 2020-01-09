@@ -5,8 +5,7 @@ description: >-
   Hooks...
 postDate: 'September 19, 2019'
 ---
-
-## Background
+## **Background**
 
 Yes, you can use the very cool Chrome extension [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) with [React Hooks](https://reactjs.org/docs/hooks-intro.html). You may have bumped into lots of articles that say one of the downsides of using React Hooks with useReduce and useState, instead of react-redux is that you loose the awesome development experience that comes with react-redux. Well, that’s just wrong. Using the npm package `reinspect` you can see state changes.
 
@@ -18,7 +17,6 @@ Below is a the JavaSript and you can find the full github repo with this example
 
 And the associated code is below. Notice how `useState` and `useReducer` are imported from `reinspect` and not `react`.
 
- 
 ```js 
 import React from "react";
 import ReactDOM from "react-dom";
