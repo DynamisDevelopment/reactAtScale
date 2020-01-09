@@ -21,7 +21,6 @@ const Contact = () => {
                         <h4 className='form-title'>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</h4>
                         <FormikForm />
                     </div>
-
                 </div>
             </div>
         </Layout>

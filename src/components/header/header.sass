@@ -25,11 +25,12 @@
     .nav-links-wide 
         // Layout
         width: 500px
-        display: hidden
+        display: flex
         justify-content: space-between
-        @media screen and (min-width: 850px)
-            display: flex !important
-        
+
         // Typography
         text-transform: uppercase
         @extend .text-sm
+        a 
+            @media screen and (max-width: 850px)
+                display: hidden
