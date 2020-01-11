@@ -14,6 +14,7 @@
     // Layout
     margin-top: 35px
     padding-top: 15px
+    @extend .sm-text-center, .md-text-left
 
     // Typography
     font-weight: bold
@@ -23,8 +24,16 @@
 .video-preview
     // Layout
     margin: 15px 0 50px 0 
-    height: 500px
     width: 100%
+    height: 500px
     @extend .container
+    @media screen and (max-width: 760px)
+        height: 400px
+    @media screen and (max-width: 500px)
+        height: 300px
+    @media screen and (max-width: 350px)
+        height: 200px
+
+
 
    

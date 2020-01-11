@@ -15,7 +15,8 @@
         flex-direction: column 
         justify-content: space-around
         align-items: center
-        @extend .px-12
+        @extend .sm-px-4, .md-px-12
+        @extend .sm-mx-4, .md-mx-0
 
         // Typography
         text-align: center
@@ -70,6 +71,8 @@
 
 .latest-posts 
     // Layout
+    display: flex
+    flex-direction: column 
     @extend .container
 
     // Typography
@@ -78,6 +81,25 @@
         // Layout
         align-items: start
         @extend .px-0
+    .all-posts-btn 
+        // Layout
+        margin-top: 10px
+        width: 200px 
+        align-self: flex-end
+        button 
+            @extend .more-btn
+
+            // Typography
+            letter-spacing: 1px
+
+            // Animation
+            transition: .2s ease-in-out 
+
+            // Misc Styling
+            background-color: $light-green
+            &:hover 
+                background-color: darken($light-green, 10%)
+        
 
             
 

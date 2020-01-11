@@ -4,8 +4,10 @@
     // Layout
     width: 100vw
     position: absolute 
+    margin-top: -20px
     display: flex 
     justify-content: space-around
+    align-items: center
     margin-top: 20px
     
     // Typography
@@ -13,11 +15,14 @@
 
     // Misc Styling
     color: #fff
+    @media screen and (max-width: 850px)
+        background-color: #fff
+        color: rgba(0,0,0,.5)
     h1 
         // Typography
         font-weight: bold 
         @extend .text-2xl
-    .nav-links 
+    .nav-links-wide 
         // Layout
         width: 500px
         display: flex
@@ -26,3 +31,6 @@
         // Typography
         text-transform: uppercase
         @extend .text-sm
+        a 
+            @media screen and (max-width: 850px)
+                display: hidden

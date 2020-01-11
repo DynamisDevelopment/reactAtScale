@@ -29,18 +29,25 @@
     display: flex 
     flex-direction: column 
     align-items: center
-    max-width: 80%
     z-index: 2
+    @extend .sm-max-w-full, .md-w-3_4, .lg-w-1_2
 
     // Typography
-    color: #fff
+    color: #fff 
+    @extend .sm-text-center, .md-text-left
     .banner-title 
         // Typography
         font-weight: bold
-        font-size: 100px
+        @extend .sm-text-4xl, .md-text-5xl, .lg-text-6xl
     .banner-subTitle
+        // Layout
+        margin-top: 10px
+        
         // Typography
+        align-self: flex-start
+        color: #fff
         font-weight: normal
-        font-size: 40px
+        font-size: 30px
+        @extend .fancy-text
 
 

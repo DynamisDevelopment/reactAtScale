@@ -1,3 +1,1 @@
-import Provider from './provider'
-
-export const wrapRootElement = Provider
+require("prismjs/themes/prism.css")

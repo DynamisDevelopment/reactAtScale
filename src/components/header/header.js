@@ -5,11 +5,14 @@ import { Link } from "gatsby"
 import './header.sass'
 
 const Header = () => {
+    const [show, setShow] = React.useState(false)
+
+    const handleToggle = () => setShow(!show)
     return (
         <div className='center'>
             <header className="header">
                 <Link to='/'><h1>Home Page and Blog</h1></Link>
-                <ul className='nav-links'>
+                <ul className='nav-links-wide'>
                     <Link to='#'>Home</Link>
                     <Link to='/about'>About</Link>
                     <Link to='/courses'>Courses</Link>

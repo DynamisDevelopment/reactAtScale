@@ -9,7 +9,16 @@ module.exports = {
     'gatsby-plugin-sass',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          'gatsby-remark-relative-images',
+          'gatsby-remark-images',
+          `gatsby-remark-prismjs`
+        ]
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -22,6 +31,23 @@ module.exports = {
       options: {
         name: 'services',
         path: `${__dirname}/src/services`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/public/assets`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-tinacms',
+      options: {
+        plugins: [
+          "gatsby-tinacms-git",
+          "gatsby-tinacms-remark",
+        ],
+        position: 'fixed'
       }
     }
   ],
