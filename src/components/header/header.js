@@ -1,27 +1,51 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "gatsby"
+import { Collapse } from '@chakra-ui/core'
+import withSizes from 'react-sizes'
 
 // * Styles 
 import './header.sass'
 
-const Header = () => {
+const Header = ({ isMobile }) => {
     const [show, setShow] = React.useState(false)
 
-    const handleToggle = () => setShow(!show)
+    const [mobile, toggle] = useState(false)
+    useEffect(() => {
+        if (!isMobile) {
+            toggle(false)
+            setShow(false)
+        }
+    })
     return (
         <div className='center'>
             <header className="header">
-                <Link to='/'><h1>Home Page and Blog</h1></Link>
-                <ul className='nav-links-wide'>
-                    <Link to='#'>Home</Link>
-                    <Link to='/about'>About</Link>
-                    <Link to='/courses'>Courses</Link>
-                    <Link to='/posts'>Posts</Link>
-                    <Link to='/contact'>Contact</Link>
-                </ul>
+                <nav className="wrapper">
+                    <Link to='/'><h1>Home Page and Blog</h1></Link>
+                    <ul className='nav-links-wide'>
+                        <Link to='#'>Home</Link>
+                        <Link to='/about'>About</Link>
+                        <Link to='/courses'>Courses</Link>
+                        <Link to='/posts'>Posts</Link>
+                        <Link to='/contact'>Contact</Link>
+                    </ul>
+
+                    <button className="nav-burger" onClick={() => setShow(!show)}>MENU</button>
+                </nav>
+
+                {isMobile && <Collapse isOpen={show} duration='500'>
+                    <ul className='nav-links-col'>
+                        <Link to='#'>Home</Link>
+                        <Link to='/about'>About</Link>
+                        <Link to='/courses'>Courses</Link>
+                        <Link to='/posts'>Posts</Link>
+                        <Link to='/contact'>Contact</Link>
+                    </ul>
+                </Collapse>}
             </header>
         </div>
     )
 }
 
-export default Header
+const mapSizesToProps = ({ width }) => ({ isMobile: width < 850 })
+
+export default withSizes(mapSizesToProps)(Header)
