@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 // * Components 
 import Layout from "../../components/layout"
@@ -30,6 +30,9 @@ export const query = graphql`
                 }
             }
         }
+        imageSharp(fixed:{ originalName: {eq: "posts-mini-bg.jpg"}}) {
+            fluid { ...GatsbyImageSharpFluid }
+        } 
     }`
 
 const Posts = ({ data, pageContext }) => {
@@ -37,7 +40,7 @@ const Posts = ({ data, pageContext }) => {
 
     return (
         <Layout>
-            <Banner imgSrc="../assets/banner/posts-mini-bg.jpg" imgAlt="Map" title="Posts" />
+            <Banner imgSrc={data.imageSharp.fluid} imgAlt="Pen writing on a book" title="Posts" />
             <div className="center">
                 <div className="posts">
                     {posts.edges.map((post, i) => {

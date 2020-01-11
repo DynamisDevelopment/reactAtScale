@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql, useStaticQuery } from "gatsby"
 
 // * Components 
 import Layout from '../components/layout'
@@ -8,9 +9,15 @@ import Banner from '../components/banner/banner'
 import '../styles/courses.sass'
 
 const Courses = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        imageSharp(fixed:{ originalName: {eq: "courses-mini-bg.jpg"}}) {
+            fluid { ...GatsbyImageSharpFluid }
+        } }`)
+
     return (
         <Layout>
-            <Banner imgSrc="./assets/banner/courses-mini-bg.jpg" imgAlt="Map" title="Video Training Courses" />
+            <Banner imgSrc={data.imageSharp.fluid} imgAlt="Map" title="Video Training Courses" />
             <div className="center">
                 <div className="courses">
                     {/*// * Using React Hooks */}
