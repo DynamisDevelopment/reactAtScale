@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 // * Styles 
 import './banner.sass'
@@ -6,7 +7,13 @@ import './banner.sass'
 const Banner = ({ imgSrc, imgAlt, title, subTitle }) => (
     // * Use background image if exists
     imgSrc ? <div className="banner-img" >
-        <img src={imgSrc} alt={imgAlt} className='banner-bg' />
+        <Img
+            fluid={imgSrc}
+            fadeIn={true}
+            loading={"eager"}
+            className='banner-bg'
+            alt={imgAlt}
+        />
         <div className="page-info">
             <h1 className='banner-title'>{title}</h1>
             {subTitle && <h3 className='banner-subTitle'>{subTitle}</h3>}

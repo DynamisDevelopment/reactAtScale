@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql, useStaticQuery } from "gatsby"
 
 // * Components 
 import Layout from '../components/layout'
@@ -10,10 +11,16 @@ import * as Yup from 'yup'
 import '../styles/contact.sass'
 
 const Contact = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        imageSharp(fixed:{ originalName: {eq: "contact-mini-bg.jpg"}}) {
+            fluid { ...GatsbyImageSharpFluid }
+        } }`)
+
     return (
         <Layout>
             <div className="contact">
-                <Banner imgSrc="./assets/banner/contact-mini-bg.jpg" imgAlt="Map"
+                <Banner imgSrc={data.imageSharp.fluid} imgAlt="Black Phone"
                     title="Contact Me" subTitle="How can I help you?" />
 
                 <div className="center bb">
