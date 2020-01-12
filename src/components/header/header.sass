@@ -1,5 +1,24 @@
 @import '../../global.sass'
 
+.light-bg 
+    // Misc Styling
+    background-color: #fff
+    color: #212529
+    h1 
+        color: #000
+    a 
+        // Animation
+        transition: .2s ease-in-out
+        &:hover 
+            color: $light-green 
+.transparent-bg 
+    // Misc Styling
+    color: #fff
+    a 
+        // Animation
+        transition: .2s ease-in-out
+        &:hover 
+            color: darken(#fff, 15%) 
 .header 
     // Layout
     width: 100vw
@@ -12,8 +31,10 @@
     // Typography
     font-weight: bold 
 
+    // Animation
+    transition: .2s ease-in-out 
+
     // Misc Styling
-    color: #fff
     @media screen and (max-width: 850px)
         background-color: #fff
         color: rgba(0,0,0,.5)
@@ -44,7 +65,7 @@
         // Misc Styling
         border: 1px dotted #000
         border-radius: 2px
-    .nav-links 
+    .nav-links
         // Typography
         text-transform: uppercase
         @extend .text-sm
