@@ -7,7 +7,7 @@ import './pager.sass'
 const Pager = ({ pageContext }) => {
     const { previousPagePath, nextPagePath } = pageContext
     return (
-        <div className='pager'>
+        <nav className='pager'>
             <div className="newer">
                 {previousPagePath && (
                     <Link to={previousPagePath}>
@@ -23,7 +23,7 @@ const Pager = ({ pageContext }) => {
                     </Link>
                 )}
             </div>
-        </div>
+        </nav>
     )
 }
 

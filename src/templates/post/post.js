@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 // * Components 
 import Layout from '../../components/layout'
@@ -8,6 +9,7 @@ import { remarkForm, DeleteAction } from 'gatsby-tinacms-remark'
 
 // * Styles 
 import './post.sass'
+import '../../components/pager/pager.sass'
 
 export const query = graphql`
     query($slug: String!) {
@@ -33,6 +35,8 @@ const Post = props => {
         config: { identifier: post.slug },
     }
 
+    const { prev, next } = props.pageContext
+    console.log(prev, '------')
     return (
         <Layout>
             <div className="post-content">
@@ -44,6 +48,22 @@ const Post = props => {
                 </div>
                 <div className="center">
                     <div className="post-comments"><DiscussionEmbed {...disqusConfig} /></div>
+                </div>
+
+                <div className="center">
+                    <nav className='pager'>
+                        <div className="older">
+                            {prev && <Link to={'posts/' + prev.fields.slug} rel="prev">
+                                <button className='more-btn older'> ← Last Post </button>
+                            </Link>}
+                        </div>
+
+                        <div className="newer">
+                            {next && <Link to={'posts/' + next.fields.slug} rel="next">
+                                <button className='more-btn'> Next Post → </button>
+                            </Link>}
+                        </div>
+                    </nav>
                 </div>
             </div>
         </Layout>
