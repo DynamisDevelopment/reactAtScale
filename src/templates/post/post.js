@@ -5,8 +5,6 @@ import Layout from '../../components/layout'
 import Banner from '../../components/banner/banner'
 import { DiscussionEmbed } from "disqus-react"
 import { remarkForm, DeleteAction } from 'gatsby-tinacms-remark'
-import { Wysiwyg } from '@tinacms/fields'
-import { TinaField } from '@tinacms/form-builder'
 
 // * Styles 
 import './post.sass'
