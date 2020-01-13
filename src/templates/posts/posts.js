@@ -53,7 +53,7 @@ const Posts = ({ data, pageContext }) => {
                                 {pf.description && <h4 className='post-description'>{pf.description}</h4>}
                             </Link>
 
-                            {pf.postDate && <h4 className='posted-info'>Posted by Peter Kellner on {pf.postDate} · {p.timeToRead} mins read</h4>}
+                            {pf.postDate && <p className='posted-info'>Posted by Peter Kellner on {pf.postDate} · {p.timeToRead} mins read</p>}
                         </div>
                     })}
                     <Pager pageContext={pageContext} />
