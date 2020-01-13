@@ -25,11 +25,11 @@ const Header = ({ isMobile, lightNav, setNav }) => {
                 <nav className="wrapper">
                     <Link to='/'><h1>Home Page and Blog</h1></Link>
                     <ul className='nav-links-wide'>
-                        <Link to='#'>Home</Link>
-                        <Link to='/about'>About</Link>
-                        <Link to='/courses'>Courses</Link>
-                        <Link to='/posts'>Posts</Link>
-                        <Link to='/contact'>Contact</Link>
+                        <li><Link to='#'>Home</Link></li>
+                        <li><Link to='/about'>About</Link></li>
+                        <li><Link to='/courses'>Courses</Link></li>
+                        <li><Link to='/posts'>Posts</Link></li>
+                        <li><Link to='/contact'>Contact</Link></li>
                     </ul>
 
                     <button className="nav-burger" onClick={() => setShow(!show)}>MENU</button>
@@ -37,11 +37,11 @@ const Header = ({ isMobile, lightNav, setNav }) => {
 
                 {isMobile && <Collapse isOpen={show} duration='500'>
                     <ul className='nav-links-col'>
-                        <Link to='#'>Home</Link>
-                        <Link to='/about'>About</Link>
-                        <Link to='/courses'>Courses</Link>
-                        <Link to='/posts'>Posts</Link>
-                        <Link to='/contact'>Contact</Link>
+                        <li><Link to='#'>Home</Link></li>
+                        <li><Link to='/about'>About</Link></li>
+                        <li><Link to='/courses'>Courses</Link></li>
+                        <li><Link to='/posts'>Posts</Link></li>
+                        <li><Link to='/contact'>Contact</Link></li>
                     </ul>
                 </Collapse>}
             </header>

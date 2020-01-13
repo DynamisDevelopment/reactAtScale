@@ -24,17 +24,17 @@ const Courses = () => {
                 <div className="courses">
                     {/*// * Using React Hooks */}
                     <a href="https://www.pluralsight.com/courses/using-react-hooks" target="_black" rel="noreferrer" className="course">
-                        <img src="../../assets/courses/react-hooks.png" alt="Using React Hooks" />
+                        <img src="../assets/courses/react-hooks.png" alt="Using React Hooks" />
                     </a>
 
                     {/*// * Server-side React with NextJS */}
                     <a href="https://www.pluralsight.com/courses/building-server-side-rendered-react-apps-beginners" target="_black" rel="noreferrer" className="course">
-                        <img src="../../assets/courses/nextjs.png" alt="Server-side React with NextJS" />
+                        <img src="../assets/courses/nextjs.png" alt="Server-side React with NextJS" />
                     </a>
 
                     {/*// * React and APT.NET CoreT */}
                     <a href="https://www.pluralsight.com/courses/aspdotnet-core-react-building-website" target="_black" rel="noreferrer" className="course">
-                        <img src="../../assets/courses/react-and-net.png" alt="React and APT.NET Core" />
+                        <img src="../assets/courses/react-and-net.png" alt="React and APT.NET Core" />
                     </a>
 
                     {/*// * Securing Multi-tenant ASP.NET */}
@@ -44,17 +44,17 @@ const Courses = () => {
 
                     {/*// * ASP.NET Core helpers */}
                     <a href="https://www.pluralsight.com/courses/aspdotnet-core-tag-helpers" target="_black" rel="noreferrer" className="course">
-                        <img src="../../assets/courses/net-tag-helpers.png" alt="ASP.NET Core helpers" />
+                        <img src="../assets/courses/net-tag-helpers.png" alt="ASP.NET Core helpers" />
                     </a>
 
                     {/*// * React and ASP.NET Core */}
                     <a href="https://www.pluralsight.com/courses/aspdotnet-core-react-building-website" target="_black" rel="noreferrer" className="course">
-                        <img src="../../assets/courses/react-net-core.png" alt="React and ASP.NET Core" />
+                        <img src="../assets/courses/react-net-core.png" alt="React and ASP.NET Core" />
                     </a>
 
                     {/*// * ExtJS Fundamentals */}
                     <a href="https://app.pluralsight.com/profile/author/peter-kellner?clickid=yEHV9rz0pxyOT-UwUx0Mo3cjUknWUwzBwzzg1M0&irgwc=1&mpid=1196644&utm_source=impactradius&utm_medium=digital_affiliate&utm_campaign=1196644&aid=7010a000001xAKZAA2" target="_black" rel="noreferrer" className="course">
-                        <img src="../../assets/courses/extjs.png" alt="ExtJS Fundamentals" />
+                        <img src="../assets/courses/extjs.png" alt="ExtJS Fundamentals" />
                     </a>
                 </div>
             </div>
