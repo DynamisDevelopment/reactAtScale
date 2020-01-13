@@ -7,8 +7,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sass',
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-purgecss',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -49,6 +50,14 @@ module.exports = {
         ],
         position: 'fixed',
         hidden: process.env.PRODUCTION === true
+      }
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        develop: false,
+        tailwind: true,
       }
     }
   ],
