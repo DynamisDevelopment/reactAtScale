@@ -38,22 +38,20 @@ const Contact = () => {
 
 const ContactForm = ({ errors, touched }) => {
     return (
-        <div>
-            <Form className='formik-form'>
-                <Field type="text" name="name" placeholder="Name" required className='field' />
-                {touched.name && errors.name && <p className='error'>{errors.name}</p>}
+        <Form className='formik-form'>
+            <Field type="text" name="name" placeholder="Name" required className='field' />
+            {touched.name && errors.name && <p className='error'>{errors.name}</p>}
 
-                <Field type="email" name="email" placeholder="Email" required className='field' />
-                {touched.name && errors.email && <p className='error'>{errors.email}</p>}
+            <Field type="email" name="email" placeholder="Email" required className='field' />
+            {touched.name && errors.email && <p className='error'>{errors.email}</p>}
 
-                <Field type="phone" name="phone" placeholder="Phone" className='field' />
-                {touched.phone && errors.phone && <p className='error'>{errors.phone}</p>}
+            <Field type="phone" name="phone" placeholder="Phone" className='field' />
+            {touched.phone && errors.phone && <p className='error'>{errors.phone}</p>}
 
-                <Field component='textarea' name="message" id="message" placeholder="Message" className='field' />
-                {touched.message && errors.message && <p className='error'>{errors.message}</p>}
-                <button type="submit" className='more-btn'>Send</button>
-            </Form>
-        </div>
+            <Field component='textarea' name="message" id="message" placeholder="Message" className='field' />
+            {touched.message && errors.message && <p className='error'>{errors.message}</p>}
+            <button type="submit" className='more-btn'>Send</button>
+        </Form>
     )
 }
 
