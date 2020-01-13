@@ -30,7 +30,6 @@ const Index = () => {
 
 
   const posts = data.allMarkdownRemark
-  console.log(data.logo)
   return (
     <Layout>
       <Banner />
@@ -38,7 +37,7 @@ const Index = () => {
       <div className="center">
         <div className="featured">
           <div className="card">
-            <img className='icon' src="./assets/illustrations/solutions.jpg" alt="Solutions Architecture" />
+            <img className='icon' src="../../assets/illustrations/solutions.jpg" alt="Solutions Architecture" />
             <div className="title">
               <h2>Solutions</h2>
               <h2>Architecture</h2>
@@ -51,14 +50,14 @@ const Index = () => {
           </div>
 
           <div className="card">
-            <img className='icon' src="./assets/illustrations/migration.jpg" alt="Migration Strategies" />
+            <img className='icon' src="../../assets/illustrations/migration.jpg" alt="Migration Strategies" />
             <h2 className='title'>Migration Strategies</h2>
             <p className='desc'>Bridging Legacy Systems</p>
             <Link to='/posts/migration-strategies'><button className='more-btn'>Learn More</button></Link>
           </div>
 
           <div className="card">
-            <img className='icon' src="./assets/illustrations/cto-advisor.jpg" alt="CTO Advisor" />
+            <img className='icon' src="../../assets/illustrations/cto-advisor.jpg" alt="CTO Advisor" />
             <h2 className='title'>CTO Advisor</h2>
             <p className='desc'>Translating Truth from Hype</p>
             <Link to='/posts/cto-advisor'><button className='more-btn'>Learn More</button></Link>
