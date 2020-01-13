@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from "../../components/layout"
 import Banner from '../../components/banner/banner'
 import Pager from '../../components/pager/pager'
+import Head from '../../components/head'
 
 // * Styles 
 import './posts.sass'
@@ -40,6 +41,7 @@ const Posts = ({ data, pageContext }) => {
 
     return (
         <Layout>
+            <Head title='Posts' />
             <Banner imgSrc={data.imageSharp.fluid} imgAlt="Pen writing on a book" title="Posts" />
             <div className="center">
                 <div className="posts">

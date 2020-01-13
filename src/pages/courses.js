@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 // * Components 
 import Layout from '../components/layout'
 import Banner from '../components/banner/banner'
+import Head from '../components/head'
 
 //* Styles 
 import '../styles/courses.sass'
@@ -17,6 +18,7 @@ const Courses = () => {
 
     return (
         <Layout>
+            <Head title='Video Training Courses' />
             <Banner imgSrc={data.imageSharp.fluid} imgAlt="Map" title="Video Training Courses" />
             <div className="center">
                 <div className="courses">

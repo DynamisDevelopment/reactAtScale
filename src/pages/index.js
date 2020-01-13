@@ -4,6 +4,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 // * Components 
 import Layout from '../components/layout'
 import Banner from '../components/banner/banner'
+import Head from '../components/head'
 
 // * Styles 
 import '../styles/index.sass'
@@ -32,6 +33,7 @@ const Index = () => {
   const posts = data.allMarkdownRemark
   return (
     <Layout>
+      <Head title={'Home'} />
       <Banner />
 
       <div className="center">

@@ -6,6 +6,7 @@ import Layout from '../../components/layout'
 import Banner from '../../components/banner/banner'
 import { DiscussionEmbed } from "disqus-react"
 import { remarkForm, DeleteAction } from 'gatsby-tinacms-remark'
+import Head from '../../components/head'
 
 // * Styles 
 import './post.sass'
@@ -17,6 +18,7 @@ export const query = graphql`
             frontmatter {
                 title 
                 postDate
+                description
             }
             fileRelativePath
             rawFrontmatter
@@ -36,9 +38,9 @@ const Post = props => {
     }
 
     const { prev, next } = props.pageContext
-    console.log(prev, '------')
     return (
         <Layout>
+            <Head title={post.frontmatter.title} description={post.frontmatter.description} />
             <div className="post-content">
                 <Banner title={post.frontmatter.title} subTitle={post.frontmatter.postDate && `Posted by Peter Kellner on ${post.frontmatter.postDate} · ${post.timeToRead} mins read`} />
                 <div className="center">

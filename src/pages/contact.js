@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import Banner from '../components/banner/banner'
 import { withFormik, Form, Field } from 'formik'
 import * as Yup from 'yup'
+import Head from '../components/head'
 
 //* Styles 
 import '../styles/contact.sass'
@@ -19,6 +20,7 @@ const Contact = () => {
 
     return (
         <Layout>
+            <Head title='Contact Me' />
             <div className="contact">
                 <Banner imgSrc={data.imageSharp.fluid} imgAlt="Black Phone"
                     title="Contact Me" subTitle="How can I help you?" />
