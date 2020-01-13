@@ -1,5 +1,6 @@
 ---
 title: CTO Advisor
+description: Translating Truth from Hype
 ---
 
 ## Translating Truth from Hype

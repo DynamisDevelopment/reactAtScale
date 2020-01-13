@@ -22,7 +22,7 @@ const Banner = ({ imgSrc, imgAlt, title, subTitle }) => (
         :
         // * Grey banner if without image
         <div className="banner-grey">
-            {!title ? <img src="../../../assets/logos/logo-white.png" alt="React at Scale Logo" className='banner-logo' />
+            {!title ? <img src="../../assets/logos/logo-white.png" alt="React at Scale Logo" className='banner-logo' />
                 : <div className="page-info">
                     <h1 className='banner-title'>{title}</h1>
                     {subTitle && <h3 className='banner-subTitle'>{subTitle}</h3>}

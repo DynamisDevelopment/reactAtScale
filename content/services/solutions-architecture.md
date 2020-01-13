@@ -1,5 +1,6 @@
 ---
 title: Solutions Architecture
+description: Creating Structure & Consistency
 ---
 
 ## Creating Structure & Consistency
