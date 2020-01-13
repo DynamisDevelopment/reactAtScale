@@ -11,9 +11,6 @@
     align-items: center
     @extend .sm-px-3, .md-px-12
     @extend .container 
-
-    // Typography
-    @extend .font-serif
     .form-title 
         @extend .sm-mx-3, .md-mx-12
 
@@ -23,13 +20,14 @@
         // Layout
         margin-top: 25px
         min-width: 100%
-
-        // Typography
-        @extend .text-2xl
         .field
             // Layout
             width: 100%
             @extend .py-8
+
+            // Typography
+            @extend .font-serif
+            @extend .text-2xl
 
             // Misc Styling
             color: rgba(0,0,0,.5)
