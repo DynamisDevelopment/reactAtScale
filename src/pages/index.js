@@ -124,8 +124,8 @@ const Index = () => {
 
               return <div className="post" key={i}>
                 <Link to={'/posts/' + p.fields.slug}>
-                  <h1 className='post-title'>{pf.title}</h1>
-                  {pf.description && <h3 className='post-description'>{pf.description}</h3>}
+                  <h2 className='post-title'>{pf.title}</h2>
+                  {pf.description && <h4 className='post-description'>{pf.description}</h4>}
                 </Link>
 
                 {pf.author && <h4 className='posted-info'>Posted by {pf.author} on {pf.postDate} · {p.timeToRead} mins read</h4>}

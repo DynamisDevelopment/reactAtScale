@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "gatsby"
+
+// * Components
 import { Collapse } from '@chakra-ui/core'
 import withSizes from 'react-sizes'
+
 
 // * Styles 
 import './header.sass'
 
-const Header = ({ isMobile }) => {
+const Header = ({ isMobile, lightNav, setNav }) => {
     const [show, setShow] = React.useState(false)
 
     const [mobile, toggle] = useState(false)
@@ -18,7 +21,7 @@ const Header = ({ isMobile }) => {
     })
     return (
         <div className='center'>
-            <header className="header">
+            <header className={!lightNav ? "header light-bg" : "header transparent-bg"}>
                 <nav className="wrapper">
                     <Link to='/'><h1>Home Page and Blog</h1></Link>
                     <ul className='nav-links-wide'>
@@ -42,6 +45,7 @@ const Header = ({ isMobile }) => {
                     </ul>
                 </Collapse>}
             </header>
+
         </div>
     )
 }

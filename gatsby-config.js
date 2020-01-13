@@ -47,7 +47,8 @@ module.exports = {
           "gatsby-tinacms-git",
           "gatsby-tinacms-remark",
         ],
-        position: 'fixed'
+        position: 'fixed',
+        hidden: process.env.PRODUCTION === true
       }
     }
   ],

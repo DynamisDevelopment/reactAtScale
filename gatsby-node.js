@@ -37,17 +37,21 @@ module.exports.createPages = async ({ graphql, actions }) => {
     paginate({
         createPage,
         items: res.data.allMarkdownRemark.edges,
-        itemsPerPage: 2,
+        itemsPerPage: 5,
         pathPrefix: '/posts',
         component: path.resolve('src/templates/posts/posts.js')
     })
 
-    res.data.allMarkdownRemark.edges.forEach(edge => {
+    const posts = res.data.allMarkdownRemark.edges
+
+    posts.forEach((post, index) => {
         createPage({
             component: postTemplate,
-            path: `/posts/${edge.node.fields.slug}`,
+            path: `/posts/${post.node.fields.slug}`,
             context: {
-                slug: edge.node.fields.slug
+                slug: post.node.fields.slug,
+                next: index === 0 ? null : posts[index - 1].node,
+                prev: index === (posts.length - 1) ? null : posts[index + 1].node
             }
         })
     })

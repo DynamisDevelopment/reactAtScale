@@ -1,6 +1,4 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useState } from "react"
 
 // * Components
 import Header from './header/header'
@@ -8,24 +6,23 @@ import Footer from './footer/footer'
 import { withPlugin } from 'tinacms'
 import { createRemarkButton } from 'gatsby-tinacms-remark'
 import slugify from 'react-slugify'
+import { Waypoint } from 'react-waypoint'
 
 // * Styles
 import '../global.sass'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+  const [lightNav, setNav] = useState(true)
   return (
     <div>
-      <Header />
+      <Header lightNav={lightNav} setNav={setNav} />
+      {/*//* Change Headers bg color when crosses banner */}
+      <Waypoint
+        onEnter={() => setNav(true)}
+        onLeave={() => setNav(false)}
+        bottomOffset='1400px'
+        className='banner'
+      />
       {children}
       <Footer />
     </div>
